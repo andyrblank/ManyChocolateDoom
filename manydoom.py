@@ -3,11 +3,11 @@ import time
 import pygetwindow as gw
 import pyautogui
 
-n = 100
+n = 200
 
 def launchChocolateDoom(n: int):
     for i in range(n):
-        os.system(f'start C:\chocolate-doom-3.0.1-win32\chocolate-doom.exe -nosound -nosfx -geometry 320x240 -iwad C:\chocolate-doom-3.0.1-win32\doom.wad')
+        os.system(f'start C:\chocolate-doom-3.0.1-win32\chocolate-doom.exe -extraconfig C:\chocolate-doom-3.0.1-win32\chocolate-doom.cfg -1 -nosound -nosfx -nomusic -iwad C:\chocolate-doom-3.0.1-win32\doom.wad')
 
 def resize_and_tile_windows(title: str, width: int, height: int, n: int):
     time.sleep(10) #wait for windows to open
@@ -18,7 +18,7 @@ def resize_and_tile_windows(title: str, width: int, height: int, n: int):
 
     #calculate number of windows per row and column
     xDistanceBetweenTiles = 175
-    yDistanceBetweenTiles = 240
+    yDistanceBetweenTiles = 200
 
     x=0
     y=0
